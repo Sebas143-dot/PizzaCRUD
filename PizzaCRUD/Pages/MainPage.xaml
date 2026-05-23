@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaCRUD.Pages.MainPage"
+             Title="Gestión de Pedidos y Pizzas">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Bienvenido al Gestor de Pizzería"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Master: Pedido" FontAttributes="Bold" FontSize="18" />
+            <Entry x:Name="txtId" Placeholder="ID (Solo para Leer/Borrar/Actualizar)" Keyboard="Numeric" />
+            <Entry x:Name="txtCliente" Placeholder="Nombre del Cliente" />
+
+            <Label Text="Detalle: Pizza" FontAttributes="Bold" FontSize="18" Margin="0,10,0,0" />
+            <Entry x:Name="txtPizzaNombre" Placeholder="Nombre de la Pizza" />
+            <Entry x:Name="txtPizzaPrecio" Placeholder="Precio de la Pizza" Keyboard="Numeric" />
+
+            <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="10" Margin="0,20,0,0">
+                <Button Text="Crear" Grid.Column="0" Clicked="BtnCrear_Clicked" BackgroundColor="#28a745" TextColor="White" />
+                <Button Text="Leer" Grid.Column="1" Clicked="BtnLeer_Clicked" BackgroundColor="#007bff" TextColor="White" />
+                <Button Text="Actualizar" Grid.Column="2" Clicked="BtnActualizar_Clicked" BackgroundColor="#ffc107" TextColor="Black" />
+                <Button Text="Borrar" Grid.Column="3" Clicked="BtnBorrar_Clicked" BackgroundColor="#dc3545" TextColor="White" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
